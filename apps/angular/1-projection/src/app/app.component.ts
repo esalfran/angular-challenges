@@ -5,13 +5,7 @@ import { TeacherCardComponent } from './component/teacher-card/teacher-card.comp
 
 @Component({
   selector: 'app-root',
-  template: `
-    <div class="grid grid-cols-3 gap-3">
-      <app-teacher-card />
-      <app-student-card />
-      <app-city-card />
-    </div>
-  `,
+  templateUrl: './app.component.html',
   imports: [TeacherCardComponent, StudentCardComponent, CityCardComponent],
 })
 export class AppComponent {}
