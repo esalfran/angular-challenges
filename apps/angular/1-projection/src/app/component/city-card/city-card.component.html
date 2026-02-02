@@ -1,0 +1,11 @@
+<!-- <app-card [list]="city()" [type]="cardType" (add)="addCity()" customClass="bg-light-green">
+  <img ngSrc="assets/img/city.png" width="200" height="200" />
+</app-card> -->
+<app-card (add)="addCity()" [items]="cities()" class="bg-light-blue">
+  <img ngSrc="assets/img/city.png" priority width="200" height="200" alt="">
+  <ng-template [cardRow]="cities()" let-city>
+    <app-list-item (delete)="deleteCity(city.id)">
+      {{ city.name }}
+    </app-list-item>
+  </ng-template>
+</app-card>
